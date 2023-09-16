@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data String</title>
+</head>
+<body>
+    <script>
+
+        /*operator Writeln secara default dibelakang ada enternya oleh karena itu apabila ingin membuat paragraph buatlah menggunakan operator write*/
+
+        // Tipe Data String perlu menggunakan ""(Petik Dua) atau ''(Petik Satu) sebelum dan setelah isi text nya
+        document.writeln("Mochamad Raihan Sutisna");
+        document.writeln("<br>");
+        document.writeln("Web Develover");
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln("<hr>");
+        document.writeln("<br>");
+
+        // Tipe Data String bisa menambahkan atau menggabungkan yakni menggunakan opeator +(plus)
+
+        document.writeln("Nama : " + "Mochamad " + "Raihan " + "Sutisna");
+        document.writeln("<br>");
+        document.writeln("Pekerjaan : " + "Fullstack Depelover");
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln("<hr>");
+        document.writeln("<br>");
+
+
+        /*
+        >> ESCAPE SEQUANCE <<
+        -- JavaScript mendukung escape sequance di string. Escape Sequance merupakan karakter khusus, seperti mendukung ENTER, TAB, ""(KUTIP DUA),dan lain-lain --
+            .... contoh escep sequance yang didukung oleh javascript di data string ....
+                \n  |  ENTER
+                \t  |  TAB
+                \'  |  '
+                \"  |  "
+                \\  |  \
+        */
+
+        document.writeln("<textarea cols='100' rows='10'>");
+        document.write("Mochamad \nRaihan \nSutisna\n");
+        document.write("\\Home\\Raihan");
+        document.write("\"FullStack Develover\"\n");
+        document.write("\t\'Belajar JavaScript\'");
+        document.writeln("</textarea>");
+    </script>
+</body>
+</html>

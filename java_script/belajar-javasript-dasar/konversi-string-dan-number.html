@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String Dan number</title>
+</head>
+<body>
+    
+    <script>
+
+        /* Melakukan Konversi String dan Number
+        FUNCTION        |       KETERANGAN
+        parseInt        |       Mengkonversi dari string ke number (bilangan bulat)
+        parseFloat      |       Mengkonversi dari string ke number (bilngan percahan)
+        Number          |       Mengkonversi dari string ke number (bilngan bulat atau pecahan)
+        number.toString |       Mengkonversi dari number ke String
+        */
+
+        const value1 = parseInt(1); // p
+        const value2 = 2;
+        const sum = value1 + value2;
+
+        document.writeln(`<p><b> ${sum} </b></p>`);
+        document.writeln("<hr>");
+
+        document.writeln(`<p> ${parseInt("1.9")}</p>`); //angka 9 yang ada dibelakang 1 HILANG dikarenakan menggunakan parseInt >>konversi ke Bilangan Bulat<<
+
+        document.writeln(`<p>${parseFloat("1.33")}</p>`); //angka 33 yang ada dibelakang 1 TETAP ADA dikarenakan menggunakan parseFloat >>konversi ke Bilangan Pecahan<<
+
+        document.writeln(`<p>${Number("1")}</p>`); // Untuk Function NUMBER bisa menerima String ke number baik bilangan Bulat maupun Pecahan
+        document.writeln(`<p>${Number("1.523")}</p>`);
+        document.writeln("<hr>")
+
+
+        // untuk data diBAWAH menggunakan Function number.toString yakni konversi dari Number ke String
+        const a = 1;    
+        const b = 2;
+        const total = a.toString() + b.toString();
+
+        document.writeln(`<p><b> ${total} </b></p>`);
+
+
+        /*
+        NaN
+
+        >> Bagaimana jika ternyata data string yang kita coba konversi ke number bukanlah data yang valid??
+        >> Jika data string yang kita coba lakukan konversi buknlah data valid, maka hasil dari konversi tersebut adalah NaN (NOT A NUMBER)
+        >> NaN adalah sumber spesial yang menyebutkan bahwa ini bukanlah number
+        >> Jika NaN dioperasikan dengan data sumber lainnya, maka hasilnya akan menjadi NaN lagi
+        
+        */
+        document.writeln("<hr>") 
+        document.writeln(`<p>${parseInt("salah")}</p>`);
+        document.writeln(`<p>${parseInt("1 aja")}</p>`);
+        document.writeln(`<p>${parseFloat("ini juga salah")}</p>`);
+        document.writeln(`<p>${parseFloat("1.33juga")}</p>`);
+
+        // Untuk Function parseInt dan parseFloat masih mentolelir ketika ada kesalahan data pada belakang angka 
+        
+
+        document.writeln("<hr>")
+        document.writeln(`<p>${Number("1")}</p>`);
+        document.writeln(`<p>${Number("1 aja")}</p>`);  
+        document.writeln(`<p>${Number("1.33juga")}</p>`);
+        document.writeln(`<p><b>${Number("1.23")}</b></p>`);
+        document.writeln(`<p>${Number("salah")}</p>`);
+        // Untuk function Number() tidak akan mentolelir kesalahan pada data selain angka
+
+        // Operasi pada NaN
+        document.writeln("<hr>")
+
+        const first = Number("salah"); //NaN
+        const totalNumber = first + 100;
+        console.log(`<p>${totalNumber}</p>`);
+
+        // isNaN() Function 
+        document.writeln(`<p>${isNaN(first)}</p>`);
+        document.writeln(`<p>${isNaN(100)}</p>`);
+        document.writeln(`<p>${isNaN(NaN)}</p>`);
+
+
+
+
+
+        
+    </script>
+
+</body>
+</html>

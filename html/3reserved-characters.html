@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatib le" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserved Characters</title>
+</head>
+<body>
+
+    <!--
+        Reserved Characters
+        > Beberapa karakter sudah dipesan oleh HTMl, sehingga kita tidak bisa digunakan pada tulisan teks biasa, contoh karakter <,/atau>
+        > Oleh karena itu, jika kita memaksakan menuliskan hal tersebut di teks paragraf misal, secara otomatis halaman HTML akan error/ rusak/ tidak sesuai dengan yang kita mau
+    -->
+    <p>Belajar<html></p>
+    <p>Belajar &lt;HTML&gt;</p>
+    <p>Belajar &ltcc;</p>
+    <p>&ltdot; &ltimes;</p>
+
+    <!-- 
+        Entities
+        > Karakter yang sudah dipesan di HTML, dinamakan HTML Entity
+        > Ada banyak sekali HTML Entity, dan direkomendasikan untuk menggunakan simbol Entity nya, ketika kita ingin menggunakan karakter tersebut
+        > Tapi sebenernya tidak wajib, kita tetap bisa menggunakan karakter asli,namun lebih aman jika menggunakan simbol Entity nya 
+        > Kita bisa lihat seluruh daftar HTML Entity di :
+        > https://oinam.github.io/entities/ 
+        > https://html.spec.whatwg.org/multipage/named-character.html
+    -->
+
+    <h1>Belajar Entities</h1>
+    <ul>
+        <li><a href="https://oinam.github.io/entities/ ">Masuk Github</a></li>
+        <li><a href="https://html.spec.whatwg.org/multipage/named-character.html">Masuk Website</a></li>
+    </ul>
+    
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+
+    <script>
+
+    /*
+
+    With Statement
+
+    >  With Statement merupakan fitur untuk menurunkan sebuah scrope data
+    > Dengan menggunakan with statement, kita bisa mengakses property dalam sebuah data tanpa harus menyebut datanya
+    
+    */
+
+
+    // Tanpa With Statement
+    /*
+    const person = {
+    firstName: "Mochamad",
+    middleName: "Raihan",
+    lastName: "Sutisna"
+    }
+
+    console.log(person.firstName);
+    console.log(person.middleName);
+    console.log(person.lastName); */
+
+
+    // Dengan With Statement
+
+    /*
+    const person = {
+        firstName: "Mochamad",
+        middleName: "Raihan",
+        lastName: "Sutisna"
+    }
+
+    with (person) {
+        console.log(person.firstName);
+        console.log(person.middleName);
+        console.log(person.lastName);
+    }
+    */
+
+    /* 
+    With Statement Tidak Direkomendasikan
+
+    > Walaupun fitur With Statement ini sangat menarik
+    > Namun kebanyakan orang tidak merekomendasikan penggunaan With Statement
+    > Hal ini dikarenakan With Statement kadang membuat sebuah kode menjadi ambigu
+    */
+
+    // Ambigu di With Statement
+
+    const person = {
+        firstName: "Mochamad",
+        middleName: "Raihan",
+        lastName: "Sutisna"
+    }
+
+    
+    with (person) {
+        console.info(person.firstName);
+        console.info(person.middleName);
+        console.info(person.lastName);
+    }
+
+    console.info(person.firstName);
+    console.info(person.middleName);
+    console.info(person.lastName); 
+
+    const firstName = "Budi";
+    const lastName = "Nugraha";
+
+    with (person) {
+        console.info(firstName); //Niatnya ingin Budi
+        console.info(middleName);
+        console.info(lastName); //Niatnya ingin Nugraha
+    }
+
+    </script> 
+    
+</body>
+</html>
